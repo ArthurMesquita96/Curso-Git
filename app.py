@@ -60,13 +60,15 @@ def create_answers_section(df):
     return None
 
 def main():
-    df = load_data()
+    df_raw = load_data()
 
-    create_dataframe_section(df)
+    create_dataframe_section(df_raw)
 
-    create_answers_section(df)
+    create_answers_section(df_raw)
 
-    st.dataframe(df)
+    st.dataframe(df_raw)
+
+    return None
 
 if __name__ == '__main__':
     main()
